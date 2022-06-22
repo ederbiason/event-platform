@@ -11,12 +11,12 @@ interface LessonProps {
 
 export function Lesson(props: LessonProps) {
     const isLessonAvailable = isPast(props.availableAt)
-    const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", {locale: ptBR,})
+    const availableDateFormated = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", {locale: ptBR,})
 
     return (
         <a href="#">
             <span className="text-gray-300">
-                {availableDateFormatted}
+                {(availableDateFormated.charAt(0).toLocaleUpperCase() + availableDateFormated.slice(1))}
             </span>
 
             <div className="rounded border border-gray-500 p-4 mt-2">
