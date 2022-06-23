@@ -1,6 +1,7 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { gql, useQuery } from "@apollo/client";
 import { CaretRight, CircleNotch, DiscordLogo, FileArrowDown, Image, Lightning } from "phosphor-react";
+import { Footer } from "./Footer";
 
 import '@vime/core/themes/default.css';
 
@@ -145,7 +146,9 @@ export function Video(props: VideoProps) {
                         </div>
                     </a>
                 </div>
-            </div>  
+            </div>
+
+            <Footer />
         </div>
     )
 }

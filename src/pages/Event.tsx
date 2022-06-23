@@ -15,6 +15,7 @@ export function Event() {
     return (
         <div className="flex flex-col min-h-screen">
             <Header onToggleSidebar={handleToogleSidebar}/>
+
             <main className="lg:flex flex-1 relative">
                 { slug 
                     ? <Video lessonSlug={slug}/> 
