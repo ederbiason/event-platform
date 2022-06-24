@@ -67,7 +67,7 @@ export function Video(props: VideoProps) {
             </div>
 
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="lg:flex items-start gap-16">
+                <div className="lg:flex lg:items-start gap-16">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
@@ -94,8 +94,8 @@ export function Video(props: VideoProps) {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-4">
-                        <a href="#" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
+                    <div className="flex flex-col gap-4 mt-4">
+                        <a href="https://discord.gg/UVZ8wHqZXt" target="_blank" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
                             <DiscordLogo size={24}/>
                             Comunidade do Discord
                         </a>
@@ -122,7 +122,7 @@ export function Video(props: VideoProps) {
                             </p>
                         </div>
 
-                        <div className="h-full p-6 flex items-center">
+                        <div className="h-full p-6 lg:flex items-center hidden">
                             <CaretRight size={24}/>
                         </div>
                     </a>
@@ -141,7 +141,7 @@ export function Video(props: VideoProps) {
                             </p>
                         </div>
 
-                        <div className="h-full p-6 flex items-center">
+                        <div className="h-full p-6 lg:flex items-center hidden">
                             <CaretRight size={24}/>
                         </div>
                     </a>
