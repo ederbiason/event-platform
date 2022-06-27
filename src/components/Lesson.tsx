@@ -25,8 +25,8 @@ export function Lesson(props: LessonProps) {
                 {(availableDateFormated.charAt(0).toLocaleUpperCase() + availableDateFormated.slice(1))}
             </span>
 
-            <div className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500', {
-                'bg-green-500' : isActiveLesson,
+            <div className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 relative', {
+                'bg-green-500 before:absolute before:content-[" "] before:w-4 before:h-4 before:top-[calc(50%-8px)] before:-left-2 before:bg-green-500 before:rotate-45 before:rounded-sm' : isActiveLesson,
             })}>
                 <header className="flex items-center justify-between">
                     {isLessonAvailable ? (
