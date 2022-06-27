@@ -27,7 +27,7 @@ export function Subscribe() {
     }
 
     return (
-        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
+        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center lg:relative">
             <div className="w-full max-w-[1100px] flex lg:flex-row flex-col items-center justify-between lg:mt-20 mt-10 mx-auto">
                 <div className="max-w-[640px]">
                     <div className="flex lg:justify-start justify-center">
@@ -72,7 +72,7 @@ export function Subscribe() {
 
             <img src={mockupImage} className="lg:mt-10 mt-0" alt="bottom image subscribe" />
 
-            <div className="w-full bg-gray-900">
+            <div className="w-full lg:absolute lg:bottom-0">
                 <Footer />
             </div>
         </div>
