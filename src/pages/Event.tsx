@@ -20,7 +20,7 @@ export function Event() {
             <main className="flex flex-1 relative">
                 { slug 
                     ? <Video lessonSlug={slug}/> 
-                    : <div className="lg:flex-1 flex flex-col items-center justify-center m-auto">
+                    : <div className="lg:flex-1 flex flex-col items-center lg:mt-20 justify-center m-auto">
                         <h1 className="text-6xl text-center">
                             Bem vindo ao <br /> <strong className="text-blue-500">Ignite Lab</strong>
                         </h1>

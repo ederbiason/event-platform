@@ -70,7 +70,7 @@ export function Subscribe() {
                 </div>
             </div>
 
-            <img src={mockupImage} className="mt-10" alt="bottom image subscribe" />
+            <img src={mockupImage} className="lg:mt-10 mt-0" alt="bottom image subscribe" />
 
             <div className="w-full bg-gray-900">
                 <Footer />
