@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 
 import '@vime/core/themes/default.css';
 import { useGetLessonBySlugQuery } from "../graphql/generated";
+import { Button, ButtonState } from "./Button";
 
 interface VideoProps {
     lessonSlug: string;
@@ -69,15 +70,9 @@ export function Video(props: VideoProps) {
                     </div>
 
                     <div className="flex flex-col gap-4 mt-4">
-                        <a href="https://discord.gg/UVZ8wHqZXt" target="_blank" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
-                            <DiscordLogo size={24} />
-                            Comunidade do Discord
-                        </a>
+                        <Button children="Comunidade do Discord" type={ButtonState.Discord} />
 
-                        <a href="#" className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors">
-                            <Lightning size={24} />
-                            Acesse o desafio
-                        </a>
+                        <Button children="Acesse o desafio" type={ButtonState.Fast} />
                     </div>
                 </div>
 
