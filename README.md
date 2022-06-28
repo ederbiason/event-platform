@@ -17,7 +17,7 @@
 
 ## :bulb: Motivation
 <p>I'm looking for specialize myself in React, so this event was a big opportunity to practice what I know and learn new technologies/tools. Was a full week of classes with much knowledge 
-    passed by the best teacher of Rocketseat company <a hred="https://github.com/diego3g" target="_blank">Diego Fernandes</a> with his excelent didatich. Thank you for all of this and that other events like Ignite Lab come.
+    passed by the best teacher of Rocketseat company <a href="https://github.com/diego3g" target="_blank">Diego Fernandes</a> with his excelent didatich. Thank you for all of this and that other events like Ignite Lab come.
 Speaking more about the project, we did the event platform with the same layout that was used on Ignite Lab, genious! We used TypeScript, GraphCMS, GraphQL, Tailwindcss, Apollo Client, date-fns and much more. Thanks <a href="https://github.com/Rocketseat" target="_blank">Rocketseat</a>, you guys are amazing! 🚀❤️</p>
 
 ## :man_technologist: Technologies used
