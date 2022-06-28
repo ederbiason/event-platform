@@ -4,7 +4,7 @@
 
 <h1 align="center">Event Platform ⚛️🚀</h1>
 <h2 align="center">Status: 🚧 Developing... 🚧</h2>
-<h2 align="center">Deployed site: <a href="https://vercel.com/ederbiason/event-platform" target="_blank">https://vercel.com/ederbiason/event-platform</a></h2>
+<h2 align="center">Deployed site: <a href="https://event-platform-two.vercel.app/" target="_blank">https://event-platform-two.vercel.app/</a></h2>
 
 <p align="center">
   <a href="#bulb-motivation">Motivation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -17,8 +17,8 @@
 
 ## :bulb: Motivation
 <p>I'm looking for specialize myself in React, so this event was a big opportunity to practice what I know and learn new technologies/tools. Was a full week of classes with much knowledge 
-passed by the best teacher of Rocketseat company @diego3g with his excelent didatich. Thank you for all of this and that other events like Ignite Lab come.
-Speaking more about the project, we did the event platform with the same layout that was used on Ignite Lab, genious! We used TypeScript, GraphCMS, GraphQL, Tailwindcss, Apollo Client, date-fns and much more. Thanks @Rocketseat, you guys are amazing! 🚀❤️</p>
+    passed by the best teacher of Rocketseat company <a hred="https://github.com/diego3g" target="_blank">Diego Fernandes</a> with his excelent didatich. Thank you for all of this and that other events like Ignite Lab come.
+Speaking more about the project, we did the event platform with the same layout that was used on Ignite Lab, genious! We used TypeScript, GraphCMS, GraphQL, Tailwindcss, Apollo Client, date-fns and much more. Thanks <a href="https://github.com/Rocketseat" target="_blank">Rocketseat</a>, you guys are amazing! 🚀❤️</p>
 
 ## :man_technologist: Technologies used
 
