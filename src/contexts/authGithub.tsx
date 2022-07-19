@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useState } from "react";
-import { getAuth, signInWithPopup, GithubAuthProvider, UserCredential, User, IdTokenResult } from "firebase/auth";
+import { createContext, ReactNode, useEffect, useState } from "react";
+import { getAuth, signInWithPopup, GithubAuthProvider, User } from "firebase/auth";
 import { app } from '../services/firebase';
 
 const provider = new GithubAuthProvider()
@@ -18,8 +18,21 @@ export const AuthGithubContext = createContext({} as AuthContextType)
 
 export function AuthGithubProvider({ children }: AuthGithubProps) {
     const auth = getAuth(app)
-    const [user, setUser] = useState<User>()
+    const [user, setUser] = useState<User | string>()
     
+    useEffect(() => {
+        const loadStoreAuth = () => {
+            const sessionToken = sessionStorage.getItem("@AuthFirebase:token")
+            const sessionUser = sessionStorage.getItem("@AuthFirebase:user")
+
+            if(sessionToken && sessionUser) {
+                setUser(sessionUser)
+            }
+        }
+        loadStoreAuth()
+    }, [])
+    
+
     const signInWithGithub = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
