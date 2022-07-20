@@ -5,6 +5,7 @@ import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 import mockupImage from '../assets/images/code-mockup.png'
 import { AuthGithubContext } from "../contexts/authGithub";
+import { GithubLogo } from 'phosphor-react'
 
 export function Subscribe() {
     const { signInWithGithub, signed } = useContext(AuthGithubContext)
@@ -68,14 +69,15 @@ export function Subscribe() {
                             placeholder="Digite seu e-mail"
                             onChange={event => setEmail(event.target.value)}
                         /> */}
-
-                        <button 
+                            
+                        <button
                             type="submit"
                             // disabled={loading}
-                            className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50"
+                            className="flex items-center justify-center gap-3 mt-4 bg-gray-500 uppercase py-4 rounded font-bold text-sm hover:bg-gray-800 transition-colors disabled:opacity-50 w-full"
                             onClick={loginGithub}
                         >
-                            Garantir minha vaga
+                            <GithubLogo size={32} className="text-purple-700" />
+                            Entrar com Github
                         </button>
                     {/* </form> */}
                 </div>
