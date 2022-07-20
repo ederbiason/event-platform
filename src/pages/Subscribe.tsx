@@ -76,7 +76,7 @@ export function Subscribe() {
                             className="flex items-center justify-center gap-3 mt-4 bg-gray-500 uppercase py-4 rounded font-bold text-sm hover:bg-gray-800 transition-colors disabled:opacity-50 w-full"
                             onClick={loginGithub}
                         >
-                            <GithubLogo size={32} className="text-purple-700" />
+                            <GithubLogo size={32} className="text-green-500" />
                             Entrar com Github
                         </button>
                     {/* </form> */}
