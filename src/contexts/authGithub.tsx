@@ -1,11 +1,12 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { getAuth, signInWithPopup, GithubAuthProvider, User } from "firebase/auth";
+import { getAuth, signInWithPopup, GithubAuthProvider, User, IdTokenResult } from "firebase/auth";
 import { app } from '../services/firebase';
+import { useNavigate } from "react-router-dom";
 
 const provider = new GithubAuthProvider()
 
 type AuthContextType = {
-    user?: User;
+    user: User | string;
     signed: Boolean;
     signInWithGithub: () => void;
 }
@@ -18,7 +19,9 @@ export const AuthGithubContext = createContext({} as AuthContextType)
 
 export function AuthGithubProvider({ children }: AuthGithubProps) {
     const auth = getAuth(app)
-    const [user, setUser] = useState<User | string>()
+    const [user, setUser] = useState<User | string>('')
+
+    const navigate = useNavigate()
     
     useEffect(() => {
         const loadStoreAuth = () => {
@@ -37,12 +40,14 @@ export function AuthGithubProvider({ children }: AuthGithubProps) {
         signInWithPopup(auth, provider)
             .then((result) => {
                 const credential = GithubAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
+                const token = credential?.accessToken;
                 const user = result.user;
 
                 setUser(user)
-                sessionStorage.setItem("@AuthFirebase:token", token)
+                sessionStorage.setItem("@AuthFirebase:token", token!)
                 sessionStorage.setItem("@AuthFirebase:user", JSON.stringify(user))
+
+                navigate('/event')
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -53,7 +58,7 @@ export function AuthGithubProvider({ children }: AuthGithubProps) {
 
     return(
         <AuthGithubContext.Provider
-            value={{signInWithGithub, signed: !!user}}
+            value={{signInWithGithub, signed: !!user, user}}
         >
             {children}
         </AuthGithubContext.Provider>
